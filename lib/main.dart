@@ -89,10 +89,7 @@ String _formatMoney(BigInt amount) {
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
-
-
-
-  // This widget is the root of your application.
+  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -156,10 +153,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
             SvgPicture.asset(
               'assets/svg/money_icon.svg',
-              width: 64, // укажите необходимую ширину
-              height: 64, // укажите необходимую высоту
+              width: 64,
+              height: 64,
             ),
-            const SizedBox(width: 16), // добавьте небольшой отступ между изображением и текстом
+            const SizedBox(width: 16),
             Text(
               _formatMoney(score),
               style: Theme.of(context).textTheme.headlineLarge?.copyWith(fontSize: 70),
@@ -229,8 +226,8 @@ class _ImprovementWidgetState extends State<ImprovementWidget> {
     return ListTile(
       leading: SvgPicture.asset(
         widget.iconPath,
-        width: 40, // укажите необходимую ширину
-        height: 40, // укажите необходимую высоту
+        width: 40,
+        height: 40,
       ),
       title: Text('${widget.name} Уровень ${widget.level}'),
       subtitle: Text('Цена: ${_formatMoney(widget.price)}'),
